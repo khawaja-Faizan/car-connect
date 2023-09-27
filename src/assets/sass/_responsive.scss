@@ -1,0 +1,50 @@
+@include media-md {
+  .menu-btn {
+    visibility: hidden;
+    @include transition-none;
+    &__burger {
+      @include transition-none;
+      &::before {
+        @include transition-none;
+      }
+      &::after {
+        @include transition-none;
+      }
+    }
+  }
+
+  .nav {
+    visibility: visible;
+
+    .menu-nav {
+      display: block;
+      transform: translateY(0);
+      height: 100%;
+      background: transparent;
+      text-align: right;
+
+      &__item {
+        display: inline;
+        padding-right: 1.5rem;
+      }
+
+      &__link {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .menu-left {
+    position: absolute;
+    left: 1rem;
+    top: 0.2rem;
+
+    &__logo {
+      width: 70%;
+    }
+  }
+
+  header {
+    height: 4.8rem;
+  }
+}

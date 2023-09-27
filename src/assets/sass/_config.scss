@@ -1,0 +1,52 @@
+$primary-color: #eeedef;
+$secondary-color: #ff2f2f;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: $primary-color;
+  color: set-text-color($primary-color);
+  height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1;
+}
+
+header {
+  position: sticky;
+  top: 0px;
+  z-index: 2;
+  width: 100%;
+  padding: 1rem;
+  height: 3.8rem;
+}
+
+@mixin transition-ease {
+  transition: all 0.5s ease-in-out;
+}
+@mixin transition-none {
+  transition: none;
+}
+
+@function set-text-color($color) {
+  @if (lightness($color) >40%) {
+    @return #000;
+  } @else {
+    @return #121212;
+  }
+}
+
+@mixin media-md {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin media-lg {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
