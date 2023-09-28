@@ -19,7 +19,10 @@
 
 .home-carousel {
   padding-top: 1em;
-  background-image: linear-gradient(to left, black, #5a5858);
+  background-image: linear-gradient(
+    $gradient-primary-color,
+    $gradient-secondary-color
+  );
 }
 
 .bottom-arrow {
@@ -31,8 +34,7 @@
     margin: 0 auto;
     width: 0;
     height: 0;
-
-    border-top: 25px solid;
+    border-top: 25px solid $gradient-secondary-color;
     border-left: 50px solid transparent;
     border-right: 50px solid transparent;
   }
