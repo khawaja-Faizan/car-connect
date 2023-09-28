@@ -15,9 +15,9 @@ const Navbar = () => {
         <div className={`menu-btn__burger ${navState ? "open" : ""}`}></div>
       </div>
       <div className="menu-left">
-        <img className="menu-left__logo" src={logo} />
+        <img className="menu-left__logo" src={logo} alt="rent-a-car-logo" />
       </div>
-      <nav className={`nav ${navState ? "open" : ""}`}>
+      <nav className={`custom-nav ${navState ? "open" : ""}`}>
         <ul className={`menu-nav ${navState ? "open" : ""}`}>
           {routes.map((route, index) => (
             <li

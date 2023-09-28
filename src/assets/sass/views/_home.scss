@@ -1,9 +1,41 @@
-.home,
-.about {
-  height: 50rem;
+.carousel-item {
+  img {
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  h3 {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  p {
+    color: rgb(157, 157, 157);
+    text-align: center;
+  }
+}
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  @include transition-ease;
+.home-carousel {
+  padding-top: 1em;
+  background-image: linear-gradient(
+    $gradient-primary-color,
+    $gradient-secondary-color
+  );
+}
+
+.bottom-arrow {
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 0;
+    height: 0;
+    border-top: 25px solid $gradient-secondary-color;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+  }
 }
