@@ -13,7 +13,7 @@
     }
   }
 
-  .nav {
+  .custom-nav {
     visibility: visible;
 
     .menu-nav {
@@ -37,7 +37,7 @@
   .menu-left {
     position: absolute;
     left: 1rem;
-    top: 0.2rem;
+    top: 0rem;
 
     &__logo {
       width: 70%;

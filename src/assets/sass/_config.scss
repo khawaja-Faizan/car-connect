@@ -35,7 +35,7 @@ header {
   @if (lightness($color) >40%) {
     @return #000;
   } @else {
-    @return #121212;
+    @return #ffffff;
   }
 }
 
