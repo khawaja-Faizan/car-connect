@@ -26,6 +26,31 @@ header {
   height: 3.8rem;
 }
 
+// .form-control {
+//   margin: 0 auto !important;
+//   width: 70% !important;
+//   margin-top: 1em !important;
+//   border: 1px solid black !important;
+//   border-radius: 4px !important;
+// }
+
+.input-group {
+  margin: 0 auto !important;
+  width: 80% !important;
+  margin-top: 1em !important;
+
+  &-text {
+    width: 95px !important;
+
+    border: 1px solid black !important;
+    border-radius: 0px !important;
+  }
+  .form-control {
+    border: 1px solid black !important;
+    border-radius: 0px !important;
+  }
+}
+
 @mixin transition-ease {
   transition: all 0.5s ease-in-out;
 }
