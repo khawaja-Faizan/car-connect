@@ -3,6 +3,7 @@ import carOne from "../../assets/images/car01.png";
 import carTwo from "../../assets/images/car02.png";
 import carThree from "../../assets/images/car03.png";
 import { Carousel } from "react-bootstrap";
+import Reservation from "../reservation/reservation";
 
 const Home = () => {
   const slides = [
@@ -34,7 +35,9 @@ const Home = () => {
           </Carousel.Item>
         ))}
       </Carousel>
-      <div className="bottom-arrow"></div>
+      <div className="bottom-arrow">
+        <Reservation />
+      </div>
     </section>
   );
 };

@@ -1,17 +1,17 @@
+import React from "react";
+import { Form, useForm } from "react-hook-form";
+import { Button, Col, Row } from "reactstrap";
 import {
   faCalendarDays,
   faLocationDot,
 } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
-import { useForm } from "react-hook-form";
-import { Col, Input, InputGroup, InputGroupText, Row } from "reactstrap";
+
+import InputContainer from "../../shared/components/inputs/inputContainer";
 
 const Reservation = () => {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm();
 
@@ -21,56 +21,51 @@ const Reservation = () => {
   return (
     <section className="reservation">
       <div className="form-container">
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <Form validated onSubmit={handleSubmit(onSubmit)}>
           <Row>
-            <Col md={4} sm={12}>
-              <InputGroup>
-                <InputGroupText>
-                  <FontAwesomeIcon
-                    icon={faLocationDot}
-                    beat
-                    size="2xs"
-                    className="location-icon"
-                  />
-                  <span>City</span>
-                </InputGroupText>
-                <Input placeholder="username" />
-              </InputGroup>
+            <Col md={3} sm={12}>
+              <InputContainer
+                icon={faLocationDot}
+                iconSize="sm"
+                groupText="Pick-up"
+                type="text"
+                placeholder="Enter a city or airport"
+                register="city"
+                required
+              />
             </Col>
-            <Col md={4} sm={12}>
-              <InputGroup>
-                <InputGroupText>
-                  <FontAwesomeIcon
-                    icon={faCalendarDays}
-                    size="2xs"
-                    className="calendar-icon"
-                  />
-                  <span>Pick-up</span>
-                </InputGroupText>
-                <Input placeholder="username" />
-              </InputGroup>
+            <Col md={3} sm={12}>
+              <InputContainer
+                icon={faCalendarDays}
+                iconSize="sm"
+                groupText="Pick-up"
+                type="date"
+                register="pickUp"
+                required
+              />
             </Col>
-            <Col md={4} sm={12}>
-              <InputGroup>
-                <InputGroupText>
-                  <FontAwesomeIcon
-                    icon={faCalendarDays}
-                    size="2xs"
-                    className="calendar-icon"
-                  />
-                  <span>Drop-off</span>
-                </InputGroupText>
-                <Input placeholder="username" />
-              </InputGroup>
+            <Col md={3} sm={12}>
+              <InputContainer
+                icon={faCalendarDays}
+                iconSize="sm"
+                groupText="Drop-off"
+                type="date"
+                register="dropOff"
+                required
+              />
             </Col>
-            <Col md={4} sm={12}>
-              <input type="submit" />
+            <Col md={3} sm={12}>
+              <div className="reservation-continue">
+                <Button className="reservation-continue__btn">
+                  Continue Reservation
+                </Button>
+              </div>
             </Col>
           </Row>
 
           {/* errors will return when field validation fails  */}
           {errors.exampleRequired && <span>This field is required</span>}
-        </form>
+        </Form>
       </div>
     </section>
   );

@@ -2,6 +2,7 @@ $primary-color: #eeedef;
 $secondary-color: #ff2f2f;
 $gradient-primary-color: #5a5858;
 $gradient-secondary-color: black;
+$primary-form-text: #707070;
 
 * {
   box-sizing: border-box;
@@ -15,6 +16,7 @@ body {
   height: 100vh;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1;
+  overflow-x: hidden;
 }
 
 header {
@@ -26,29 +28,17 @@ header {
   height: 3.8rem;
 }
 
-// .form-control {
-//   margin: 0 auto !important;
-//   width: 70% !important;
-//   margin-top: 1em !important;
-//   border: 1px solid black !important;
-//   border-radius: 4px !important;
-// }
+.row {
+  margin: 0 !important;
+}
 
-.input-group {
-  margin: 0 auto !important;
-  width: 80% !important;
-  margin-top: 1em !important;
+.row > * {
+  padding-right: 0px !important ;
+}
 
-  &-text {
-    width: 95px !important;
-
-    border: 1px solid black !important;
-    border-radius: 0px !important;
-  }
-  .form-control {
-    border: 1px solid black !important;
-    border-radius: 0px !important;
-  }
+.app {
+  padding-left: 0em;
+  padding-right: 0em;
 }
 
 @mixin transition-ease {

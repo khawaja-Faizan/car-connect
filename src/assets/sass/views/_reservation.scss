@@ -1,13 +1,47 @@
 .reservation {
-  margin-top: 2em;
-}
+  padding-bottom: 1em;
+  background: black;
 
-// .form-container {
-//   background-color: aquamarine;
-// }
+  .form-container {
+    padding: 1.5em;
+  }
 
-.location-icon,
-.calendar-icon {
-  color: #ff2f2f;
-  margin: 5px 2px 5px 0px;
+  .input-group {
+    margin: 0.5em auto !important;
+    width: 90% !important;
+    .form-control {
+      color: #707070;
+    }
+    &-text {
+      font-size: 14px !important;
+      font-weight: 600;
+      width: 7em !important;
+      color: #707070;
+      border: 2px solid #efe9e9 !important;
+      border-radius: 0px !important;
+
+      &__icon {
+        color: $secondary-color;
+        margin: 5px 4px 5px 0px;
+      }
+    }
+    .form-control {
+      border: 2px solid #efe9e9 !important;
+      border-radius: 0px !important;
+    }
+  }
+
+  .reservation-continue {
+    text-align: center;
+    margin-top: 0.5em;
+
+    &__btn {
+      width: 90%;
+      font-weight: 700;
+      background-color: $secondary-color;
+      border: 1px solid $secondary-color;
+      border-radius: 0% !important;
+      box-shadow: 4px 5px $primary-color;
+    }
+  }
 }
