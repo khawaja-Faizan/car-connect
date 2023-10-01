@@ -10,6 +10,7 @@ body {
   height: 100vh;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1;
+  overflow-x: hidden;
 }
 
 header {
@@ -21,6 +22,22 @@ header {
   height: 3.8rem;
 }
 
+.row {
+  margin: 0 !important;
+}
+
+.row > * {
+  padding-right: 0px !important;
+}
+
+.app {
+  padding-left: 0em;
+  padding-right: 0em;
+}
+
+header {
+  background: #eeedef;
+}
 header li {
   list-style-type: none;
 }
@@ -32,7 +49,7 @@ header a {
   position: absolute;
   z-index: 1;
   right: 1rem;
-  top: 1rem;
+  top: 1.2rem;
   height: 20px;
   width: 28px;
   cursor: pointer;
@@ -85,15 +102,17 @@ header a {
   width: 50%;
 }
 
-.nav {
+.custom-nav {
   position: fixed;
   width: 100vw;
+  padding-left: 0em;
+  padding-right: 0em;
   visibility: hidden;
   top: 0;
   left: 0;
   opacity: 0.98;
 }
-.nav.open {
+.custom-nav.open {
   visibility: visible;
 }
 
@@ -120,7 +139,7 @@ header a {
   transform: translateX(0);
 }
 .menu-nav__item.active > a {
-  color: #ff2f2f;
+  color: #f04e4e;
 }
 .menu-nav__link {
   display: inline-block;
@@ -131,7 +150,7 @@ header a {
   transition: all 0.5s ease-in-out;
 }
 .menu-nav__link:hover {
-  color: #ff2f2f;
+  color: #f04e4e;
 }
 
 .menu-nav__item:nth-child(1) {
@@ -168,27 +187,27 @@ header a {
   .menu-btn__burger::after {
     transition: none;
   }
-  .nav {
+  .custom-nav {
     visibility: visible;
   }
-  .nav .menu-nav {
+  .custom-nav .menu-nav {
     display: block;
     transform: translateY(0);
     height: 100%;
     background: transparent;
     text-align: right;
   }
-  .nav .menu-nav__item {
+  .custom-nav .menu-nav__item {
     display: inline;
     padding-right: 1.5rem;
   }
-  .nav .menu-nav__link {
+  .custom-nav .menu-nav__link {
     font-size: 1rem;
   }
   .menu-left {
     position: absolute;
     left: 1rem;
-    top: 0.2rem;
+    top: 0rem;
   }
   .menu-left__logo {
     width: 70%;
@@ -196,12 +215,97 @@ header a {
   header {
     height: 4.8rem;
   }
+  .app {
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+  .custom-nav {
+    width: 95vw;
+  }
 }
-.home,
-.about {
-  height: 50rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.5s ease-in-out;
+.carousel-item img {
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.carousel-item h3 {
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.carousel-item p {
+  color: rgb(157, 157, 157);
+  text-align: center;
+}
+
+.home-carousel {
+  padding-top: 1em;
+  background-image: linear-gradient(#5a5858, black);
+}
+
+.bottom-arrow:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 0;
+  height: 0;
+  border-top: 25px solid black;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+}
+
+.reservation {
+  padding-bottom: 1em;
+  background: black;
+}
+.reservation .form-container {
+  padding: 1.5em;
+}
+.reservation .input-container {
+  margin: 0.5em auto !important;
+  width: 90% !important;
+}
+.reservation .input-container .input-group .form-control {
+  color: #707070;
+}
+.reservation .input-container .input-group-text {
+  font-size: 14px !important;
+  font-weight: 600;
+  width: 7em !important;
+  color: #707070;
+  border: 2px solid #efe9e9 !important;
+  border-radius: 0px !important;
+}
+.reservation .input-container .input-group-text__icon {
+  color: #f04e4e;
+  margin: 5px 4px 5px 0px;
+}
+.reservation .input-container .input-group .form-control {
+  border: 2px solid #efe9e9 !important;
+  border-radius: 0px !important;
+}
+.reservation .input-container .input-group .is-invalid {
+  border: 2px solid red !important;
+  background-image: none !important;
+  padding-right: 12px !important;
+}
+.reservation .input-container .error-msg {
+  color: red;
+  font-size: x-small;
+}
+.reservation .reservation-continue {
+  text-align: center;
+  margin-top: 0.5em;
+}
+.reservation .reservation-continue__btn {
+  width: 90%;
+  font-weight: 700;
+  background-color: #f04e4e;
+  border: 1px solid #f04e4e;
+  border-radius: 0% !important;
+  box-shadow: 4px 5px #eeedef;
 }/*# sourceMappingURL=app.css.map */
