@@ -1,5 +1,5 @@
-import React from "react";
-import { Form, useForm } from "react-hook-form";
+import React, { useState } from "react";
+import { useForm } from "react-hook-form";
 import { Button, Col, Row } from "reactstrap";
 import {
   faCalendarDays,
@@ -7,6 +7,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 import InputContainer from "../../shared/components/inputs/inputContainer";
+import Modal from "../../shared/components/modal/modal";
 
 const Reservation = () => {
   const {
@@ -14,24 +15,33 @@ const Reservation = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
+  const [modal, setModal] = useState(false);
 
-  const onSubmit = (data) => {
-    console.log(data);
+  // Toggle between the open state of modal
+  const toggleModal = () => {
+    setModal(!modal);
   };
+  const onSubmit = (data) => {
+    toggleModal();
+    console.log("12", data);
+  };
+
   return (
     <section className="reservation">
       <div className="form-container">
-        <Form validated onSubmit={handleSubmit(onSubmit)}>
+        <form onSubmit={handleSubmit(onSubmit)}>
           <Row>
             <Col md={3} sm={12}>
               <InputContainer
                 icon={faLocationDot}
                 iconSize="sm"
                 groupText="Pick-up"
+                name="city"
                 type="text"
                 placeholder="Enter a city or airport"
-                register="city"
-                required
+                register={register}
+                errors={errors}
+                required={true}
               />
             </Col>
             <Col md={3} sm={12}>
@@ -39,9 +49,11 @@ const Reservation = () => {
                 icon={faCalendarDays}
                 iconSize="sm"
                 groupText="Pick-up"
+                name="pickUp"
                 type="date"
-                register="pickUp"
-                required
+                register={register}
+                errors={errors}
+                required={true}
               />
             </Col>
             <Col md={3} sm={12}>
@@ -49,23 +61,25 @@ const Reservation = () => {
                 icon={faCalendarDays}
                 iconSize="sm"
                 groupText="Drop-off"
+                name="dropOff"
                 type="date"
-                register="dropOff"
-                required
+                register={register}
+                errors={errors}
+                required={true}
               />
             </Col>
             <Col md={3} sm={12}>
               <div className="reservation-continue">
-                <Button className="reservation-continue__btn">
+                <Button type="submit" className="reservation-continue__btn">
                   Continue Reservation
                 </Button>
               </div>
             </Col>
           </Row>
-
-          {/* errors will return when field validation fails  */}
-          {errors.exampleRequired && <span>This field is required</span>}
-        </Form>
+          <Row>
+            <Modal modal={modal} toggle={toggleModal}></Modal>
+          </Row>
+        </form>
       </div>
     </section>
   );

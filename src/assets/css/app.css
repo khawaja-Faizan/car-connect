@@ -139,7 +139,7 @@ header a {
   transform: translateX(0);
 }
 .menu-nav__item.active > a {
-  color: #ff2f2f;
+  color: #f04e4e;
 }
 .menu-nav__link {
   display: inline-block;
@@ -150,7 +150,7 @@ header a {
   transition: all 0.5s ease-in-out;
 }
 .menu-nav__link:hover {
-  color: #ff2f2f;
+  color: #f04e4e;
 }
 
 .menu-nav__item:nth-child(1) {
@@ -265,14 +265,14 @@ header a {
 .reservation .form-container {
   padding: 1.5em;
 }
-.reservation .input-group {
+.reservation .input-container {
   margin: 0.5em auto !important;
   width: 90% !important;
 }
-.reservation .input-group .form-control {
+.reservation .input-container .input-group .form-control {
   color: #707070;
 }
-.reservation .input-group-text {
+.reservation .input-container .input-group-text {
   font-size: 14px !important;
   font-weight: 600;
   width: 7em !important;
@@ -280,13 +280,22 @@ header a {
   border: 2px solid #efe9e9 !important;
   border-radius: 0px !important;
 }
-.reservation .input-group-text__icon {
-  color: #ff2f2f;
+.reservation .input-container .input-group-text__icon {
+  color: #f04e4e;
   margin: 5px 4px 5px 0px;
 }
-.reservation .input-group .form-control {
+.reservation .input-container .input-group .form-control {
   border: 2px solid #efe9e9 !important;
   border-radius: 0px !important;
+}
+.reservation .input-container .input-group .is-invalid {
+  border: 2px solid red !important;
+  background-image: none !important;
+  padding-right: 12px !important;
+}
+.reservation .input-container .error-msg {
+  color: red;
+  font-size: x-small;
 }
 .reservation .reservation-continue {
   text-align: center;
@@ -295,8 +304,8 @@ header a {
 .reservation .reservation-continue__btn {
   width: 90%;
   font-weight: 700;
-  background-color: #ff2f2f;
-  border: 1px solid #ff2f2f;
+  background-color: #f04e4e;
+  border: 1px solid #f04e4e;
   border-radius: 0% !important;
   box-shadow: 4px 5px #eeedef;
 }/*# sourceMappingURL=app.css.map */

@@ -1,38 +1,40 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useForm } from "react-hook-form";
-
-import { Input, InputGroup, InputGroupText } from "reactstrap";
 
 const InputContainer = (props) => {
-  const {
-    register,
-
-    formState: { errors },
-  } = useForm();
-  const { ref, ...registerField } = register(props.register, {
-    required: props.required,
-  });
   return (
-    <InputGroup>
-      <InputGroupText>
-        {props.icon ? (
-          <FontAwesomeIcon
-            icon={props.icon}
-            size={props.iconSize}
-            className="input-group-text__icon"
+    <>
+      <div className="input-container">
+        <div className="input-group">
+          <span className="input-group-text">
+            {" "}
+            {props.icon ? (
+              <FontAwesomeIcon
+                icon={props.icon}
+                size={props.iconSize}
+                className="input-group-text__icon"
+              />
+            ) : (
+              ""
+            )}
+            {props.groupText}
+          </span>
+
+          <input
+            type={props.type}
+            name={props.name}
+            placeholder={props?.placeholder}
+            {...props.register(props.name, { required: true })}
+            className={`form-control ${
+              props.errors[props.name] ? "is-invalid" : ""
+            }`}
           />
-        ) : (
-          ""
+        </div>
+
+        {props.errors[props.name] && (
+          <span className="error-msg">*field is required*</span>
         )}
-        <span>{props.groupText}</span>
-      </InputGroupText>
-      <Input
-        type={props.type}
-        placeholder={props?.placeholder}
-        innerRef={ref}
-        {...registerField}
-      />
-    </InputGroup>
+      </div>
+    </>
   );
 };
 
