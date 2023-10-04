@@ -4,6 +4,7 @@ $gradient-primary-color: #5a5858;
 $gradient-secondary-color: black;
 $primary-form-text: #707070;
 $required-field: red;
+$headings: #716d6e;
 
 * {
   box-sizing: border-box;
@@ -12,7 +13,6 @@ $required-field: red;
 }
 
 body {
-  background: $primary-color;
   color: set-text-color($primary-color);
   height: 100vh;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
