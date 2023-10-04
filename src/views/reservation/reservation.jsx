@@ -7,7 +7,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 import InputContainer from "../../shared/components/inputs/inputContainer";
-import Modal from "../../shared/components/modal/modal";
+import Model from "../../shared/components/modal/modal";
 
 const Reservation = () => {
   const {
@@ -77,7 +77,7 @@ const Reservation = () => {
             </Col>
           </Row>
           <Row>
-            <Modal modal={modal} toggle={toggleModal}></Modal>
+            <Model modal={modal} toggle={toggleModal}></Model>
           </Row>
         </form>
       </div>

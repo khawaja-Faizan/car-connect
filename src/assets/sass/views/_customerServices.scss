@@ -1,0 +1,42 @@
+.customer-services {
+  margin: 3em 1em;
+  &__header {
+    text-align: center;
+    color: $headings;
+    margin: 2em;
+    h1 {
+      font-weight: 700 !important;
+    }
+  }
+  .underline {
+    height: 4px;
+    width: 135px;
+    display: block;
+    background-color: #c61334;
+    margin: 0 auto;
+  }
+
+  .card {
+    background: $primary-color;
+    border-radius: 0px !important ;
+    border: 1px white solid;
+    margin-bottom: 1em;
+    .card-title {
+      &__icon {
+        background: aliceblue;
+        color: $secondary-color;
+        font-weight: 700;
+        margin-right: 0.3em;
+      }
+      &__text {
+        font-weight: 700;
+        color: $headings;
+      }
+    }
+    &-text {
+      line-height: 1.5em;
+      text-align: left;
+      color: #787575;
+    }
+  }
+}

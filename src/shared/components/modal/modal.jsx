@@ -1,7 +1,7 @@
 import React from "react";
-import { ModalBody, ModalHeader } from "reactstrap";
+import { ModalBody, ModalHeader, Modal } from "reactstrap";
 
-const Modal = (props) => {
+const Model = (props) => {
   const { modal, toggle } = props;
 
   return (
@@ -12,4 +12,4 @@ const Modal = (props) => {
   );
 };
 
-export default Modal;
+export default Model;
