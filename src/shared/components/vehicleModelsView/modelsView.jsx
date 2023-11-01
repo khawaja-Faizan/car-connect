@@ -4,44 +4,45 @@ import React from "react";
 import { Button, Col, Row, Table } from "reactstrap";
 
 export const ModelsView = (props) => {
+  const { data } = props;
   return (
     <div className="model-view">
       <Row>
         <Col md={8} sm={12}>
-          <img src={props.img} />
+          <img src={data.img} />
         </Col>
         <Col md={4} sm={12}>
           <div>
             <div className="model-rate">
               <h4>
-                <span>$37.40</span> rent per day
+                <span>{data.rent}</span> rent per day
               </h4>
             </div>
             <Table hover>
               <tbody>
                 <tr>
                   <th scope="row">Model</th>
-                  <td>Mark</td>
+                  <td>{data.model}</td>
                 </tr>
                 <tr>
                   <th scope="row">Doors</th>
-                  <td>Jacob</td>
+                  <td>{data.doors}</td>
                 </tr>
                 <tr>
                   <th scope="row">Seats</th>
-                  <td>Larry</td>
+                  <td>{data.seats}</td>
                 </tr>
                 <tr>
                   <th scope="row">Transmission</th>
-                  <td>Larry</td>
+                  <td>{data.transmission}</td>
                 </tr>
                 <tr>
                   <th scope="row">Air Conditioning</th>
-                  <td>Larry</td>
+                  <td>{data.airConditioning ? "Yes" : "No"}</td>
                 </tr>
                 <tr>
                   <th scope="row">Minimum age</th>
-                  <td>Larry</td>
+                  <td>{data.maxAge}</td>
                 </tr>
               </tbody>
             </Table>

@@ -11,9 +11,6 @@
     width: 90% !important;
 
     .input-group {
-      .form-control {
-        color: #707070;
-      }
       &-text {
         font-size: 14px !important;
         font-weight: 600;
@@ -30,6 +27,7 @@
       .form-control {
         border: 2px solid #efe9e9 !important;
         border-radius: 0px !important;
+        color: #707070;
       }
       .is-invalid {
         border: 2px solid $required-field !important;

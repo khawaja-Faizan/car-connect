@@ -11,6 +11,12 @@
       }
     }
   }
+
+  .form-select {
+    border: 2px solid #efe9e9 !important;
+    border-radius: 0px !important;
+    color: #707070;
+  }
 }
 
 .model-view {
@@ -66,4 +72,8 @@
   th {
     font-weight: 600 !important;
   }
+}
+
+.md-selection {
+  display: none;
 }

@@ -52,10 +52,27 @@
     padding-left: 3em;
     padding-right: 3em;
   }
+
   .custom-nav {
     width: 95vw;
   }
+
   .customer-services {
     margin: 3em 7em;
+  }
+
+  .sm-selection {
+    display: none;
+  }
+  .md-selection {
+    display: block;
+
+    &_btn {
+      width: 100%;
+
+      .btn {
+        width: 100%;
+      }
+    }
   }
 }
