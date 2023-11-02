@@ -1,5 +1,5 @@
 $primary-color: #eeedef;
-$secondary-color: #f04e4e;
+$secondary-color: #c61334;
 $gradient-primary-color: #5a5858;
 $gradient-secondary-color: black;
 $primary-form-text: #707070;
@@ -27,6 +27,12 @@ header {
   width: 100%;
   padding: 1rem;
   height: 3.8rem;
+}
+
+.form-control {
+  border: 2px solid #efe9e9 !important;
+  border-radius: 0px !important;
+  color: #707070;
 }
 
 .row {

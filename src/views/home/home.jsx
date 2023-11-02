@@ -1,7 +1,7 @@
 import React from "react";
-import carOne from "../../assets/images/car01.png";
-import carTwo from "../../assets/images/car02.png";
-import carThree from "../../assets/images/car03.png";
+import carOne from "../../assets/images/carousel/car01.png";
+import carTwo from "../../assets/images/carousel/car02.png";
+import carThree from "../../assets/images/carousel/car03.png";
 import { Carousel } from "react-bootstrap";
 import Reservation from "../reservation/reservation";
 
