@@ -61,9 +61,16 @@
     margin: 3em 7em;
   }
 
+  .subscription {
+    &_form {
+      margin: 0em;
+    }
+  }
+
   .sm-selection {
     display: none;
   }
+
   .md-selection {
     display: block;
 
