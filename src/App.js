@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import CustomerServices from "./views/customerServices/customerServices";
 import VehicleModels from "./views/vehicleModels/vehicleModels";
 import Subscription from "./views/subscription/subscription";
+import GeneralInfo from "./views/generalInfo/generatInfo";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <CustomerServices />
       <Subscription />
       <VehicleModels />
+      <GeneralInfo />
     </div>
   );
 }
