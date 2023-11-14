@@ -1,40 +1,60 @@
 .info {
   color: $primary-form-text;
   text-align: center;
-  h2 {
-    font-size: 28px;
-    font-weight: 700;
-    margin-bottom: 0.5em;
-    margin-top: 0.5em;
-  }
-  h6 {
-    font-size: 18.5px;
-    padding-left: 0.4em;
-    padding-right: 0.4em;
-    font-weight: 400;
-    margin-bottom: 1.4em;
-  }
-  p {
-    font-size: 14.5px;
-    font-weight: 400;
-    line-height: 1.5em;
-    text-align: center;
+
+  .text-container {
+    width: 100%;
+    h2 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 0.5em;
+      margin-top: 0.5em;
+    }
+    h6 {
+      font-size: 18.5px;
+      padding-left: 0.4em;
+      padding-right: 0.4em;
+      font-weight: 400;
+      margin-bottom: 1.4em;
+    }
+    p {
+      font-size: 14.5px;
+      font-weight: 400;
+      line-height: 1.5em;
+      text-align: center;
+    }
+
+    &_more-btn {
+      background-color: $secondary-color;
+      padding: 0.7em 0.9em;
+      font-size: 19px;
+      font-weight: 700;
+      color: white;
+      border: none !important;
+      box-shadow: 4px 5px $primary-color;
+      margin-bottom: 2em;
+    }
   }
 
-  &_more-btn {
-    background-color: $secondary-color;
-    padding: 0.7em 0.9em;
-    font-size: 19px;
-    font-weight: 700;
-    color: white;
-    border: none !important;
-    box-shadow: 4px 5px $primary-color;
-    margin-bottom: 2em;
+  .tour-info {
+    .tour-video {
+      width: 100vw;
+      height: 50vh;
+    }
+
+    .labeled-text {
+      background-color: $secondary-color;
+      color: white;
+    }
   }
 
-  .car-interior {
+  .img-container {
     display: block;
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+
+    .car-interior {
+      display: block;
+      max-width: 100%;
+    }
   }
 }
