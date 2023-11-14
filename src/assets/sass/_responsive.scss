@@ -82,4 +82,57 @@
       }
     }
   }
+
+  //-------------------- General Info section-----------------------
+  .info {
+    margin: 0% 15% 0% 15%;
+    text-align: left;
+    .abc {
+      .text-con {
+        float: left;
+        width: 50%;
+        padding-right: 1em;
+
+        h2 {
+          font-size: 38px;
+          margin-bottom: 0.7em;
+          margin-top: 0.7em;
+        }
+        h6 {
+          font-size: 24px;
+          margin-bottom: 1.8em;
+        }
+        p {
+          font-size: 17px;
+          line-height: 1.7em;
+          text-align: left;
+          margin-bottom: 1.5em;
+        }
+
+        &_more-btn {
+          background-color: $secondary-color;
+          padding: 0.7em 0.9em;
+          font-size: 19px;
+          font-weight: 700;
+          color: white;
+          border: none !important;
+          box-shadow: 4px 5px $primary-color;
+        }
+      }
+
+      .img-con {
+        display: block;
+        float: right;
+        width: 50%;
+        height: 100%;
+
+        .car-interior {
+          max-width: 100%;
+          max-height: 100%;
+          width: -webkit-fill-available;
+          height: -webkit-fill-available;
+        }
+      }
+    }
+  }
 }

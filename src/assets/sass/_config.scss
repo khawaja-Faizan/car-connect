@@ -48,6 +48,16 @@ header {
   padding-right: 0em;
 }
 
+.info-tooltip {
+  color: $secondary-color;
+  text-decoration: underline dashed;
+  cursor: pointer;
+}
+
+.bs-tooltip-top {
+  padding: 0% !important;
+}
+
 @mixin transition-ease {
   transition: all 0.5s ease-in-out;
 }
