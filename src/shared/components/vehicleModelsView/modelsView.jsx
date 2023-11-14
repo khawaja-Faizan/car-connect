@@ -15,7 +15,7 @@ export const ModelsView = (props) => {
           <div>
             <div className="model-rate">
               <h4>
-                <span>{data.rent}</span> rent per day
+                <span>${data.rent}</span> rent per day
               </h4>
             </div>
             <Table hover>

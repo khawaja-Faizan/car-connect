@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Form from "react-bootstrap/Form";
 
 import carOne from "../../assets/images/displayModels/Gray-X5-Bmw.png";
@@ -13,10 +13,10 @@ import { Button } from "react-bootstrap";
 const VehicleModels = () => {
   const { Select } = Form;
   const [model, setModel] = useState(0);
+  const [activeClass, setActiveClass] = useState(0);
 
   const modelChanged = (e) => {
     setModel(parseInt(e.target.value));
-    console.log(e.target.value);
   };
 
   const data = [
@@ -82,6 +82,10 @@ const VehicleModels = () => {
     },
   ];
 
+  const handleClick = (id) => {
+    setActiveClass(id);
+  };
+
   return (
     <section className="vehicle-models">
       <div className="vehicle-models__header">
@@ -100,15 +104,22 @@ const VehicleModels = () => {
               </Select>
             </div>
             <div className="md-selection">
-              {data.map((model) => (
+              {data.map((model, index) => (
                 <div className="md-selection_btn">
-                  <Button value={model.id}>{model.name}</Button>
+                  <Button
+                    className={`model-btn ${
+                      activeClass === index ? "active" : ""
+                    }`}
+                    onClick={(e) => handleClick(index)}
+                  >
+                    {model.name}
+                  </Button>
                 </div>
               ))}
             </div>
           </Col>
           <Col md={9} sm={12}>
-            <ModelsView data={data[model]} />;
+            <ModelsView data={data[model]} />
           </Col>
         </Row>
       </div>
