@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 
 import carOne from "../../assets/images/displayModels/Gray-X5-Bmw.png";
@@ -13,7 +13,7 @@ import { Button } from "react-bootstrap";
 const VehicleModels = () => {
   const { Select } = Form;
   const [model, setModel] = useState(0);
-  const [activeClass, setActiveClass] = useState(0);
+  const [activeClass, setActiveClass] = useState(model);
 
   const modelChanged = (e) => {
     setModel(parseInt(e.target.value));
@@ -82,8 +82,9 @@ const VehicleModels = () => {
     },
   ];
 
-  const handleClick = (id) => {
+  const handleClick = (id, modelId) => {
     setActiveClass(id);
+    setModel(parseInt(modelId));
   };
 
   return (
@@ -110,10 +111,15 @@ const VehicleModels = () => {
                     className={`model-btn ${
                       activeClass === index ? "active" : ""
                     }`}
-                    onClick={(e) => handleClick(index)}
+                    onClick={(e) => handleClick(index, model.id)}
                   >
                     {model.name}
                   </Button>
+                  <div
+                    className={`${activeClass === index ? "right-arrow" : ""}`}
+                  >
+                    {" "}
+                  </div>
                 </div>
               ))}
             </div>
