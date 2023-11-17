@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import { Button } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
+import { Col, Row } from "reactstrap";
 
 import carOne from "../../assets/images/displayModels/Gray-X5-Bmw.png";
 import carTwo from "../../assets/images/displayModels/SL63-AMG.png";
@@ -7,8 +9,6 @@ import carThree from "../../assets/images/displayModels/Toyota-Yaris.png";
 import carFour from "../../assets/images/displayModels/Toyota-Sequoia.png";
 import carFive from "../../assets/images/displayModels/Acura.png";
 import { ModelsView } from "../../shared/components/vehicleModelsView/modelsView";
-import { Col, Row } from "reactstrap";
-import { Button } from "react-bootstrap";
 
 const VehicleModels = () => {
   const { Select } = Form;
