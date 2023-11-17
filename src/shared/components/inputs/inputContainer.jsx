@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const InputContainer = (props) => {
+  const { required, register } = props;
   return (
     <>
       <div className="input-container">
@@ -23,14 +24,14 @@ const InputContainer = (props) => {
             type={props.type}
             name={props.name}
             placeholder={props?.placeholder}
-            {...props.register(props.name, { required: true })}
+            {...(required ? register(props?.name, { required: true }) : "")}
             className={`form-control ${
-              props.errors[props.name] ? "is-invalid" : ""
+              props.errors && props?.errors[props.name] ? "is-invalid" : ""
             }`}
           />
         </div>
 
-        {props.errors[props.name] && (
+        {props.errors && props.errors[props.name] && (
           <span className="error-msg">*field is required*</span>
         )}
       </div>

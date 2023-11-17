@@ -5,6 +5,7 @@ import CustomerServices from "./views/customerServices/customerServices";
 import VehicleModels from "./views/vehicleModels/vehicleModels";
 import Subscription from "./views/subscription/subscription";
 import GeneralInfo from "./views/generalInfo/generatInfo";
+import ContactUs from "./views/contactUs/contactUs";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Subscription />
       <VehicleModels />
       <GeneralInfo />
+      <ContactUs />
     </div>
   );
 }

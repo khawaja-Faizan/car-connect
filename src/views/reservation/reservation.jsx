@@ -23,7 +23,6 @@ const Reservation = () => {
   };
   const onSubmit = (data) => {
     toggleModal();
-    console.log("12", data);
   };
 
   return (
